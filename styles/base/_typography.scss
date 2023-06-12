@@ -1,0 +1,146 @@
+//main: ../main.scss
+
+/**
+ * Basic typography style for copy text
+ */
+ 
+body {
+    color: $text-color;
+    font: normal 125% / 1.4 $text-font-stack;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+    text-transform: none;
+}
+
+h1 {
+    font-size: 44px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+p, ul, ol, label, input, textarea {
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul, ol {
+    padding-left: 40px;
+}
+
+strong, b {
+    font-weight: 700;
+}
+
+em, i {
+    font-style: italic;
+}
+
+a {
+    color: $text-color;
+
+    &:hover {
+        color: $blue;
+        text-decoration: none;
+    }
+
+    @include on-event() {
+        text-decoration: none;
+    }
+}
+
+
+@media (max-width: 991px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+
+    p, ul, ol, label, input, textarea {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: 16px;
+    }
+
+    ul, ol {
+        padding-left: 30px;
+    }
+
+    p, ul, ol, label, input, textarea  {
+        font-size: 14px;
+    }
+}
+
+.heading-underline {
+    height: auto;
+}

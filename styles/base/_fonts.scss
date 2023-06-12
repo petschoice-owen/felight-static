@@ -1,0 +1,8 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@include font-face($font-soleil-book, $base-url + 'fonts/', 'soleil-book', 'soleil-book');
+@include font-face($font-catalpa-extrabold, $base-url + 'fonts/', 'catalpa-extrabold', 'catalpa-extrabold');

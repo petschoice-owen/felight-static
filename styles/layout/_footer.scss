@@ -1,0 +1,211 @@
+//main: ../main.scss
+
+// ------------------------------------------------------------------------------------
+// This file contains all styles related to the footer section of the site/application.
+// ------------------------------------------------------------------------------------
+
+.footer-section {
+    position: relative;
+    padding: 35px 0;
+    overflow: hidden;
+    color: #fff;
+    background-color: $burgundy;
+
+    .footer-background {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        height: auto;
+        max-height: 85%;
+        opacity: .1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .images {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1px;
+            bottom: 0;
+            width: 3px;
+            height: calc(100% - 20px);
+            margin: auto;
+            background-color: $pink;
+        }
+    }
+  
+    .logo-holder {
+        display: flex;
+        justify-content: center;
+        padding-right: 30px;
+    
+        img {
+            max-width: 120px;
+        }
+    }
+
+    .socials {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 0 25px;
+        list-style: none;
+
+        li + li {
+            margin-left: 22px;
+        }
+
+        a {
+            display: flex;
+
+            &:hover {
+                img {
+                    filter: none;
+                }
+            }
+        }
+
+        img {
+            width: auto;
+            height: 40px;
+            filter: brightness(100);
+        }
+    }
+  
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 0;
+        list-style: none;
+    
+        li {
+            position: relative;
+    
+            &:not(:last-child) {
+                margin-right: 10px;
+                padding-right: 12px;
+        
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: -2px;
+                    right: 0;
+                    bottom: 0;
+                    left: auto;
+                    margin: auto;
+                    width: 2px;
+                    height: 18px;
+                    background-color: #fff;
+                }
+            }
+        }
+    
+        a {
+            display: flex;
+            padding: 5px 0;
+            font-size: 14px;
+            color: #fff;
+            transition: .1s ease-in-out all;
+    
+            &:hover {
+                // color: $pink;
+                color: $blue;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .copyright-text {
+        margin-top: 10px;
+    }
+
+    .copyright-text,
+    p {
+        font-size: 14px;
+        color: #fff;
+        transition: .1s ease-in-out all;
+        text-align: center;
+    }
+  
+    @media (max-width: 991px) { 
+        .footer-background {
+            max-height: 75%;
+        }
+
+        .logo-holder img {
+            max-width: 100px;
+        }
+
+        .socials img {
+            height: 34px;
+        }
+    }
+  
+    @media (max-width: 767px) {
+        .footer-background {
+            max-height: 60%;
+        }
+
+        .images::after {
+            height: calc(100% - 15px);
+        }
+
+        .logo-holder img {
+            max-width: 90px;
+        }
+
+        .socials img {
+            height: 28px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .images {
+            justify-content: center;
+            width: 100%;
+
+            .logo-holder {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: -1px;
+                    bottom: 0;
+                    width: 3px;
+                    height: calc(100% - 15px);
+                    margin: auto;
+                    background-color: $pink;
+                }
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .socials {
+            position: relative;
+            left: initial;
+        }
+    }
+}
