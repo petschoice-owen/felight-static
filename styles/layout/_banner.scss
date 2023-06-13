@@ -5,5 +5,22 @@
 // ------------------------------------------------------------------------------------
 
 .banner {
-    height: auto;
+    &-bg-white {
+        background-color: #fff;
+    }
+    &-bg-pink {
+        background-color: $pink;
+    }
+    &-bg-burgundy {
+        background-color: $burgundy;
+    }
+    &-bg-blue {
+        background-color: $blue;
+    }
+    &-bg-green {
+        background-color: $green;
+    }
+    &-bg-yellow {
+        background-color: $yellow;
+    }
 }
