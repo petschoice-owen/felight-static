@@ -27,6 +27,7 @@
 
 .banner-home {
     padding: 100px 0 150px;
+    overflow: hidden;
 
     .wrapper {
         position: relative;
@@ -47,7 +48,20 @@
         top: 0;
         left: 50%;
 
+        .background-color {
+            content: "";
+            position: absolute;
+            top: -100px;
+            left: 140px;
+            width: 100vw;
+            height: calc(100% + 250px);
+            background-color: $blue;
+            transform: skewX(-10deg);
+        }
+
         img {
+            position: relative;
+            z-index: 2;
             width: 420px;
             height: auto;
         }
@@ -58,5 +72,56 @@
         max-width: 310px;
         padding: 30px 0;
         font-size: 20px;
+    }
+}
+
+.banner-home-2 {
+    padding: 120px 0 250px;
+    overflow: hidden;
+
+    .wrapper {
+        position: relative;
+    }
+
+    .section-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        margin-left: 19%;
+        text-align: center;
+    }
+
+    .banner-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        padding-top: 70px;
+
+        .background-color {
+            content: "";
+            position: absolute;
+            top: -120px;
+            left: 160px;
+            width: 100vw;
+            height: calc(100% + 250px);
+            background-color: $blue;
+            transform: skewX(-10deg);
+        }
+
+        img {
+            position: relative;
+            z-index: 2;
+            width: 470px;
+            height: auto;
+        }
+    }
+
+    p {
+        width: 100%;
+        max-width: 400px;
+        padding: 30px 0;
+        font-size: 26px;
     }
 }

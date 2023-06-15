@@ -170,7 +170,7 @@ a {
     font-size: 38px;
     line-height: 1;
     font-family: $font-catalpa-extrabold;
-    transform: rotate(-3deg);
+    transform: rotate(-2deg);
 
     &::after {
         content: "";
@@ -190,6 +190,16 @@ a {
 .heading-underlined-big {
     padding: 15px 0 25px;
     font-size: 50px;
+
+    &::after {
+        height: 12px;
+        margin-top: -2px;
+    }
+}
+
+.heading-underlined-bigger {
+    padding: 15px 0 25px;
+    font-size: 60px;
 
     &::after {
         height: 12px;
