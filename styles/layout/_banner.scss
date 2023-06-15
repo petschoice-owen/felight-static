@@ -24,3 +24,39 @@
         background-color: $yellow;
     }
 }
+
+.banner-home {
+    padding: 100px 0 150px;
+
+    .wrapper {
+        position: relative;
+    }
+
+    .section-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        margin-left: 20%;
+        text-align: center;
+    }
+
+    .banner-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        img {
+            width: 420px;
+            height: auto;
+        }
+    }
+
+    p {
+        width: 100%;
+        max-width: 310px;
+        padding: 30px 0;
+        font-size: 20px;
+    }
+}
