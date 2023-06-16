@@ -94,6 +94,27 @@ var mainAutoPadding = () => {
         }
     }
 }
+
+// category boxes
+var categoryBoxes = () => {
+    if ( $(".category-boxes .category").length ) {
+        // uniform auto-height
+        if ( $(".category-boxes .category p").length ) {
+            var categoryBoxHeight = $(".category-boxes .category p").closest(".category").height();
+
+            $(".category-boxes .category").each(function() {
+                $(this).css("height" , categoryBoxHeight + "px");
+            });
+        }
+
+        // remove default scroll function on click function of anchor element
+        $(".category-boxes .not-clickable").each(function() {
+            $(this).click(function(e) {
+                e.preventDefault();
+            });
+        });
+    }
+}
   
 // initialize the functions
 windowScrolled();
@@ -103,10 +124,12 @@ $(document).ready(function() {
     // scrollSpy();
     // mainAutoPadding();
     autoScrollSection();
+    categoryBoxes();
 });
   
 $(window).resize(function() {
     // mainAutoPadding();
+    categoryBoxes();
 });
   
 $(window).on('load', function() {

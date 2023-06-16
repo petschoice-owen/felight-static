@@ -1,0 +1,47 @@
+//main: ../main.scss
+
+// --------------------------------------------------------------------------------------------
+// This file contains all styles related to the category boxes section of the site/application.
+// --------------------------------------------------------------------------------------------
+
+.category-boxes {
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .category {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .category-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 70px;
+
+        &:hover {
+            p {
+                color: #fff;
+            }
+        }
+    }
+
+    // .not-clickable {
+    //     pointer-events: none;
+    // }
+
+    p {
+        width: 380px;
+        margin-top: 30px;
+        font-size: 24px;
+        color: #fff;
+    }
+}

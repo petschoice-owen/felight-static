@@ -4,27 +4,6 @@
 // This file contains all styles related to the banner section of the site/application.
 // ------------------------------------------------------------------------------------
 
-.banner {
-    &-bg-white {
-        background-color: #fff;
-    }
-    &-bg-pink {
-        background-color: $pink;
-    }
-    &-bg-burgundy {
-        background-color: $burgundy;
-    }
-    &-bg-blue {
-        background-color: $blue;
-    }
-    &-bg-green {
-        background-color: $green;
-    }
-    &-bg-yellow {
-        background-color: $yellow;
-    }
-}
-
 .banner-home {
     padding: 100px 0 150px;
     overflow: hidden;
@@ -76,6 +55,7 @@
 }
 
 .banner-home-2 {
+    position: relative;
     padding: 120px 0 250px;
     overflow: hidden;
 
@@ -89,7 +69,7 @@
         justify-content: center;
         align-items: center;
         width: fit-content;
-        margin-left: 19%;
+        margin-left: 15%;
         text-align: center;
     }
 
@@ -103,10 +83,9 @@
             content: "";
             position: absolute;
             top: -120px;
-            left: 160px;
+            left: 165px;
             width: 100vw;
             height: calc(100% + 250px);
-            background-color: $blue;
             transform: skewX(-10deg);
         }
 
@@ -123,5 +102,26 @@
         max-width: 400px;
         padding: 30px 0;
         font-size: 26px;
+    }
+
+    .image-confetti {
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        width: auto;
+        max-width: 35vw;
+        height: auto;
+        min-height: 330px;
+        max-height: 35vh;
+    }
+
+    .image-right {
+        top: 0;
+        right: 0;
+    }
+
+    .image-left {
+        bottom: 0;
+        left: 0;
     }
 }

@@ -132,3 +132,88 @@ main {
     padding-top: 84px;
     background-color: $burgundy;
 }
+
+.background {
+    &-white {
+        background-color: #fff;
+    }
+    &-pink {
+        background-color: $pink;
+    }
+    &-burgundy {
+        background-color: $burgundy;
+    }
+    &-blue {
+        background-color: $blue;
+    }
+    &-green {
+        background-color: $green;
+    }
+    &-yellow {
+        background-color: $yellow;
+    }
+}
+
+.border-top {
+    &-1 {
+        border-top-width: 1px;
+        border-top-style: solid;
+    }
+    &-2 {
+        border-top-width: 2px;
+        border-top-style: solid;
+    }
+    &-3 {
+        border-top-width: 3px;
+        border-top-style: solid;
+    }
+    &-4 {
+        border-top-width: 4px;
+        border-top-style: solid;
+    }
+    &-5 {
+        border-top-width: 5px;
+        border-top-style: solid;
+    }
+}
+.border-bottom {
+    &-1 {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+    }
+    &-2 {
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+    }
+    &-3 {
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+    }
+    &-4 {
+        border-bottom-width: 4px;
+        border-bottom-style: solid;
+    }
+    &-5 {
+        border-bottom-width: 5px;
+        border-bottom-style: solid;
+    }
+}
+
+.border-color-white {
+    border-color: #fff;
+}
+.border-color-pink {
+    border-color: $pink;
+}
+.border-color-burgundy {
+    border-color: $burgundy;
+}
+.border-color-blue {
+    border-color: $blue;
+}
+.border-color-green {
+    border-color: $green;
+}
+.border-color-yellow {
+    border-color: $yellow;
+}

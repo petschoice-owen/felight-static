@@ -141,6 +141,25 @@ a {
 }
 
 
+.line-white::after {
+    background-color: #fff;
+}
+.line-pink::after {
+    background-color: $pink;
+}
+.line-burgundy::after {
+    background-color: $burgundy;
+}
+.line-blue::after {
+    background-color: $blue;
+}
+.line-green::after {
+    background-color: $green;
+}
+.line-yellow::after {
+    background-color: $yellow;
+}
+
 .heading-white {
     color: #fff;
 }
@@ -167,18 +186,21 @@ a {
     align-items: center;
     width: fit-content;
     padding: 10px 0 20px;
-    font-size: 38px;
+    font-size: 42px;
     line-height: 1;
     font-family: $font-catalpa-extrabold;
+    text-align: center;
     transform: rotate(-2deg);
 
     &::after {
         content: "";
         position: relative;
         z-index: 1;
-        width: 100%;
+        width: calc(100% + 5px);
         height: 8px;
         transform: rotate(-4deg);
+        margin-top: -2px;
+        margin-bottom: 2px;
     }
 
     span {
@@ -193,7 +215,8 @@ a {
 
     &::after {
         height: 12px;
-        margin-top: -2px;
+        margin-top: -6px;
+        margin-bottom: 6px;
     }
 }
 
@@ -204,25 +227,53 @@ a {
     &::after {
         height: 12px;
         margin-top: -2px;
+        margin-bottom: 2px;
     }
 }
 
+.heading-whisker {
+    span {
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            margin: auto;
+            width: 35px;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        &::before {
+            right: calc(100% + 10px);
+            top: 0;
+        }
+        &::after {
+            left: calc(100% + 12px);
+            top: 5px;
+        }
+    }
 
-.line-white::after {
-    background-color: #fff;
-}
-.line-pink::after {
-    background-color: $pink;
-}
-.line-burgundy::after {
-    background-color: $burgundy;
-}
-.line-blue::after {
-    background-color: $blue;
-}
-.line-green::after {
-    background-color: $green;
-}
-.line-yellow::after {
-    background-color: $yellow;
+    &-burgundy {
+        span {
+            &::before {
+                background-image: url(../../assets/images/whiskers-left-burgundy.png);
+            }
+            &::after {
+                background-image: url(../../assets/images/whiskers-right-burgundy.png);
+            }
+        }
+    }
+
+    &-pink {
+        span {
+            &::before {
+                background-image: url(../../assets/images/whiskers-left-pink.png);
+            }
+            &::after {
+                background-image: url(../../assets/images/whiskers-right-pink.png);
+            }
+        }
+    }
 }
