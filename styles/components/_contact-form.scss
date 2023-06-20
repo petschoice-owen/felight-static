@@ -1,0 +1,131 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the contact form component.
+// -----------------------------------------------------------------------------
+
+.contact-form {
+    form {
+        .item-input-row,
+        span {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item-input-column {
+            width: 100%;
+            max-width: 50%;
+            padding: 8px 10px;
+        }
+
+        .item-input-column-full {
+            max-width: 100%;
+        }
+
+        input,
+        select,
+        textarea {
+            display: flex;
+            width: 100%;
+            max-width: 100%;
+            padding: 10px 12px;
+            background-color: transparent;
+            font-family: $font-soleil-book;
+            font-size: 16px;
+            color: #fff;
+            border: 1px solid $burgundy;
+            border-radius: 0;
+            box-shadow: none;
+            outline: none;
+            transition: .25s ease all;
+
+            &:focus,
+            &:focus-visible,
+            &:focus-within {
+                border-color: $blue;
+            }
+        }
+
+        textarea {
+            height: 100px;
+            line-height: 1.3;
+            resize: none;
+        }
+
+        select {
+            padding-right: 30px;
+            cursor: pointer;
+            appearance: none;
+
+            option {
+                color: $burgundy;
+            }
+        }
+
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            font-family: $font-soleil-book;
+            font-size: 16px;
+            color: #fff;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            font-family: $font-soleil-book;
+            font-size: 16px;
+            color: #fff;
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+            font-family: $font-soleil-book;
+            font-size: 16px;
+            color: #fff;
+        }
+        :-moz-placeholder { /* Firefox 18- */
+            font-family: $font-soleil-book;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .field-select {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 10px;
+                bottom: 0;
+                width: 12px;
+                height: 6px;
+                margin: auto;
+                background-image: url(../assets/images/accordion-arrow-down-burgundy.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                -webkit-filter: none;
+                filter: brightness(100);
+                pointer-events: none;
+            }
+        }
+
+        .field-submit {
+            display: flex;
+            justify-content: center;
+            padding-top: 5px;
+
+            input {
+                @extend .btn-burgundy;
+
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+                // padding: 18px 30px 15px;
+                // font-size: 18px;
+                // line-height: 1;
+                // font-family: $font-soleil-book;
+                // color: #fff;
+                // text-transform: uppercase;
+                // background-color: $burgundy;
+                // border: none;
+                // border-radius: 0;
+                // transition: .35s ease-in-out all;
+            }
+        }
+    }
+}

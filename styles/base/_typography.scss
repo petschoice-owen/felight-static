@@ -258,10 +258,10 @@ a {
     &-burgundy {
         span {
             &::before {
-                background-image: url(../../assets/images/whiskers-left-burgundy.png);
+                background-image: url(../assets/images/whiskers-left-burgundy.png);
             }
             &::after {
-                background-image: url(../../assets/images/whiskers-right-burgundy.png);
+                background-image: url(../assets/images/whiskers-right-burgundy.png);
             }
         }
     }
@@ -269,10 +269,10 @@ a {
     &-pink {
         span {
             &::before {
-                background-image: url(../../assets/images/whiskers-left-pink.png);
+                background-image: url(../assets/images/whiskers-left-pink.png);
             }
             &::after {
-                background-image: url(../../assets/images/whiskers-right-pink.png);
+                background-image: url(../assets/images/whiskers-right-pink.png);
             }
         }
     }

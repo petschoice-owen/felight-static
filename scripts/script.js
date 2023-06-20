@@ -115,6 +115,14 @@ var categoryBoxes = () => {
         });
     }
 }
+
+// accordion
+var accordion = () => {
+    if ( $(".accordion").length ) {
+        $("#accordion .accordion-item:first-child button").removeClass("collapsed").attr("aria-expanded", "true");
+        $("#accordion .accordion-item:first-child .accordion-collapse").addClass("show");
+    }
+}
   
 // initialize the functions
 windowScrolled();
@@ -134,6 +142,7 @@ $(window).resize(function() {
   
 $(window).on('load', function() {
     scrollSpy();
+    accordion();
 });
   
   

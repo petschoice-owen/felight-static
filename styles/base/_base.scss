@@ -133,6 +133,10 @@ main {
     background-color: $burgundy;
 }
 
+.not-clickable {
+    pointer-events: none;
+}
+
 .background {
     &-white {
         background-color: #fff;

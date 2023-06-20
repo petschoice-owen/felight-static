@@ -138,7 +138,11 @@
 
         .image-castle {
             position: absolute;
+            bottom: -70px;
+            left: -50px;
             z-index: 1;
+            width: 450px;
+            height: auto;
         }
 
         .wrapper {
@@ -146,7 +150,7 @@
             z-index: 2;
             display: flex;
             flex-direction: column;
-            width: fit-content;
+            width: 800px;
             margin-left: auto;
             padding-right: 100px;
         }
@@ -155,14 +159,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: fit-content;
+            width: 100%;
             
             p {
-                width: 550px;
-                margin-top: 25px;
+                // width: 550px;
+                margin-top: 30px;
                 font-size: 18px;
                 line-height: 1.3;
             }
+        }
+
+        .accordion {
+            margin-top: 40px;
         }
     }
 
@@ -176,7 +184,7 @@
             top: 0;
             bottom: 0;
             z-index: 1;
-            width: 250px;
+            width: 280px;
             height: auto;
             margin: auto;
         }
@@ -195,8 +203,9 @@
         }
 
         .wrapper {
-            // padding: 0 100px;
-            width: 80%;
+            // width: 80%;
+            width: 100%;
+            padding: 0 100px;
             margin: auto;
         }
 
@@ -215,6 +224,53 @@
                 display: flex;
                 flex-direction: column;
                 width: 50%;
+                padding: 0 30px;
+            }
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 50px;
+
+            .detail-full {
+                width: 100%;
+            }
+
+            .detail-half {
+                width: 50%;
+            }
+
+            .detail {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding-left: 40px;
+                min-height: 25px;
+
+                & + .detail {
+                    margin-top: 25px;
+                }
+            }
+    
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: auto;
+                height: 20px;
+                margin: auto;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            a {
+                display: flex;
+                font-size: 14px;
+                line-height: 18px;
             }
         }
     }
