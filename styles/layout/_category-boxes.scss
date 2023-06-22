@@ -34,14 +34,21 @@
         }
     }
 
-    // .not-clickable {
-    //     pointer-events: none;
-    // }
-
     p {
         width: 380px;
         margin-top: 30px;
         font-size: 24px;
         color: #fff;
+    }
+
+    @media (max-width: 1199px) {
+        .category-link {
+            padding: 50px;
+        }
+        
+        p {
+            width: 340px;
+            font-size: 22px;
+        }
     }
 }

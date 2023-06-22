@@ -28,10 +28,10 @@
             display: flex;
             width: 100%;
             max-width: 100%;
-            padding: 10px 12px;
+            padding: 10px;
             background-color: transparent;
             font-family: $font-soleil-book;
-            font-size: 16px;
+            font-size: 14px;
             color: #fff;
             border: 1px solid $burgundy;
             border-radius: 0;
@@ -64,22 +64,22 @@
 
         ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             font-family: $font-soleil-book;
-            font-size: 16px;
+            font-size: 14px;
             color: #fff;
         }
         ::-moz-placeholder { /* Firefox 19+ */
             font-family: $font-soleil-book;
-            font-size: 16px;
+            font-size: 14px;
             color: #fff;
         }
         :-ms-input-placeholder { /* IE 10+ */
             font-family: $font-soleil-book;
-            font-size: 16px;
+            font-size: 14px;
             color: #fff;
         }
         :-moz-placeholder { /* Firefox 18- */
             font-family: $font-soleil-book;
-            font-size: 16px;
+            font-size: 14px;
             color: #fff;
         }
 
