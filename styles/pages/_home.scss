@@ -7,7 +7,7 @@
 .page-home {
     .features {
         position: relative;
-        padding: 100px 0;
+        padding: 120px 0;
         overflow: hidden;
 
         .image-leaf {
@@ -40,7 +40,7 @@
             justify-content: center;
             // padding: 50px 100px;
             width: 1100px;
-            padding: 50px 0;
+            padding-top: 50px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -349,6 +349,8 @@
   
     @media (max-width: 1199px) {
         .features {
+            padding: 100px 0;
+
             .image-leaf {
                 max-height: 480px;
             }
@@ -377,7 +379,8 @@
             }
 
             .section-text {
-                margin-left: 0;
+                // margin-left: 0;
+                margin-left: 4%;
             }
 
             .section-image {
@@ -417,14 +420,251 @@
     }
   
     @media (max-width: 991px) {
-      
+        .features {
+            .image-leaf {
+                max-height: 400px;
+            }
+
+            .image-left {
+                left: -30px;
+            }
+
+            .image-right {
+                right: -30px;
+            }
+
+            .items {
+                flex-wrap: wrap;
+                padding-top: 0;
+            }
+
+            .item {
+                width: 100%;
+                padding: 50px 40px 0;
+
+                &-icon {
+                    max-height: 60px;
+                    margin-bottom: 20px;
+                }
+
+                &-description {
+                    width: 400px;
+                }
+            }
+        }
+
+        .about {
+            padding: 100px 0;
+
+            .image-paw {
+                left: 20%;
+                height: 180px;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .section-image {
+                position: relative;
+                z-index: 1;
+                left: 55%;
+                order: 1;
+
+                .background-color {
+                    top: -100px;
+                    left: 154px;
+                    height: calc(100vh + 200px);
+                }
+
+                img {
+                    width: 250px;
+                }
+            }
+
+            .section-text {
+                position: relative;
+                z-index: 2;
+                order: 2;
+                width: 100%;
+                padding-top: 50px;
+            }
+        }
+
+        .faqs {
+            .image-castle {
+                right: 78%;
+                width: 270px;
+            }
+
+            .accordion {
+                padding-left: 150px;
+            }
+        }
+
+        .contact {
+            .image-contact {
+                bottom: 30px;
+            }
+
+            .image-left {
+                left: -10%;
+                right: initial;
+            }
+
+            .image-right {
+                left: initial;
+                right: -10%;
+            }
+
+            form {
+                input:not([type="submit"]), select, textarea {
+                    background-color: $pink;
+                }
+            }
+        }
     }
   
     @media (max-width: 767px) {
-      
+        .features {
+            padding: 50px 0;
+
+            .image-leaf {
+                max-height: 220px;
+            }
+
+            .item {
+                padding: 50px 10px 0;
+
+                &-icon {
+                    max-height: 50px;
+                }
+
+                &-heading {
+                    font-size: 22px;
+                }
+
+                &-description {
+                    width: 100%;
+                    max-width: 400px;
+                    margin-top: 15px;
+                    font-size: 16px;
+                }
+            }
+        } 
+
+        .about {
+            padding: 100px 0 70px;
+
+            .image-paw {
+                left: 10%;
+                height: 140px;
+            }
+
+            .section-image {
+                left: initial;
+                right: initial;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 100px 0 70px;
+
+                .background-color {
+                    left: 167px;
+                    height: 650px;
+                }
+
+                img {
+                    width: 220px;
+                }
+            }
+
+            .section-text {
+                position: relative;
+                margin-left: initial;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: -15px;
+                    width: calc(100% + 30px);
+                    height: 100%;
+                    background-color: $burgundy;
+                    border-top: 2px solid $pink;
+                }
+
+                h2, p {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                p {
+                    width: 100%;
+                    max-width: 450px;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .faqs {
+            padding: 50px 0;
+
+            .image-castle {
+                display: none;
+            }
+
+            .wrapper {
+                width: 100%;
+                max-width: 700px;
+            }
+
+            .section-text {
+                p {
+                    margin-top: 20px;
+                    font-size: 16px;
+                }
+            }
+
+            .accordion {
+                padding-left: initial;
+            }
+        }
+
+        .contact {
+            padding: 50px 0;
+
+            .image-contact {
+                display: none;
+            }
+
+            .wrapper {
+                width: 100%;
+                max-width: 650px;
+            }
+
+            .columns {
+                margin-top: 30px;
+
+                .column {
+                    padding: 0;
+                }
+            }
+
+            .contact-details {
+                .detail {
+                    padding-left: 35px;
+                }
+            }
+        }
     }
-  
+
     @media (max-width: 575px) {
-      
+        .contact {
+            .contact-details .detail-half {
+                width: 100%;
+            }
+        }
     }
 }

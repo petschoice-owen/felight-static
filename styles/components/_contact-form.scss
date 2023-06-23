@@ -127,5 +127,18 @@
                 // transition: .35s ease-in-out all;
             }
         }
+
+        @media (max-width: 575px) {
+            .item-input-column {
+                max-width: 100%;
+            }
+
+            .field-submit {
+                p {
+                    width: 100%;
+                    padding: 0 10px;
+                }
+            }
+        }
     }
 }

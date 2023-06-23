@@ -1,0 +1,112 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the search section component.
+// -----------------------------------------------------------------------------
+
+.search-section {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 400px;
+    padding: 10px;
+    background-color: $pink;
+    border: 1px solid $burgundy;
+    border-top: 0;
+    transition: .25s ease-in-out all;
+    opacity: 0;
+    pointer-events: none;
+
+    &.show {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    form {
+        position: relative;
+        display: flex;
+
+        label {
+            width: 100%;
+        }
+
+        .search-field {
+            width: 100%;
+            padding: 10px 110px 10px 10px;
+            font-family: $font-soleil-book;
+            font-size: 16px;
+            color: $burgundy;
+            box-shadow: none;
+            border: 0;
+            outline: none;
+            appearance: none;
+
+            &::-ms-clear {
+                display: none;
+                width : 0; 
+                height: 0;
+            }
+
+            &::-ms-reveal {
+                display: none;
+                width : 0; 
+                height: 0;
+            }
+
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration {
+                display: none;
+            }
+        }
+
+        .search-submit {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100px;
+            height: 100%;
+            margin: auto;
+            font-family: $font-soleil-book;
+            font-size: 16px;
+            color: #fff;
+            background-color: $burgundy;
+            border: none;
+            transition: .25s ease-in-out all;
+
+            &:hover {
+                background-color: $blue;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 5px;
+
+        form {
+            .search-field {
+                padding: 8px 110px 8px 8px;
+            }
+
+            .search-submit {
+                width: 80px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        width: 100%;
+
+        form {
+            .search-field {
+                font-size: 14px;
+            }
+    
+            .search-submit {
+                font-size: 14px;
+            }
+        }
+    }
+}

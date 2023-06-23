@@ -1,0 +1,38 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the floating subscribe component.
+// -----------------------------------------------------------------------------
+
+.floating-subscribe {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+
+    img {
+        width: 50px;
+        height: auto;
+    }
+
+    @media (max-width: 991px) {
+        img {
+            width: 40px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        right: 10px;
+        padding: 10px;
+
+        img {
+            width: 30px;
+        }
+    }
+}

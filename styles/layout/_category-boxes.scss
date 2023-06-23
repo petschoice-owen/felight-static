@@ -51,4 +51,31 @@
             font-size: 22px;
         }
     }
+
+    @media (max-width: 991px) {
+        .category-link {
+            padding: 30px;
+        }
+
+        p {
+            width: 300px;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .category {
+            width: 100%;
+        }
+
+        p {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .heading-whisker {
+            padding-bottom: 5px;
+        }
+    }
 }

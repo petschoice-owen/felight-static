@@ -68,4 +68,31 @@
             }
         }
     }
+
+    @media (max-width: 991px) {
+        .accordion-item {
+            button.accordion-button {
+                font-size: 16px;
+
+                &::after {
+                    width: 14px;
+                    height: 8px;
+                }
+            }
+
+            .accordion-body {
+                p, li {
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .accordion-item {
+            button.accordion-button {
+                padding: 12px;
+            }
+        }
+    }
 }
