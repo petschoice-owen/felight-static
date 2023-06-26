@@ -131,6 +131,18 @@ var categoryBoxes = () => {
                 e.preventDefault();
             });
         });
+
+        // animation
+        if ( $(".category-boxes .clickable").length ) {
+            $(".category-boxes .clickable").each(function() {
+                $(this).on("mouseenter", function() {
+                    $(this).removeClass("animate__tada");
+                    setTimeout(() => {
+                        $(this).addClass("animate__tada");
+                    }, 100);
+                })
+            })
+        }
     }
 }
 
@@ -139,6 +151,18 @@ var accordion = () => {
     if ( $(".accordion").length ) {
         $("#accordion .accordion-item:first-child button").removeClass("collapsed").attr("aria-expanded", "true");
         $("#accordion .accordion-item:first-child .accordion-collapse").addClass("show");
+    }
+}
+
+// subscribe button
+var subscribeButton = () => {
+    if ( $(".floating-subscribe").length ) {
+        $(".floating-subscribe").on("mouseenter", function() {
+            $(this).removeClass("animate__rubberBand");
+            setTimeout(() => {
+                $(this).addClass("animate__rubberBand");
+            }, 100);
+        })
     }
 }
   
@@ -152,6 +176,8 @@ $(document).ready(function() {
     autoScrollSection();
     categoryBoxes();
     searchBar();
+    subscribeButton();
+    scrollCue.init();
 });
   
 $(window).resize(function() {

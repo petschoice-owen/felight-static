@@ -5,6 +5,10 @@
 // -----------------------------------------------------------------------------
 
 .page-home {
+    .category-boxes {
+        overflow: hidden;
+    }
+
     .features {
         position: relative;
         padding: 120px 0;
@@ -87,6 +91,7 @@
             left: 45%;
             z-index: 1;
             height: 220px;
+            opacity: 0;
         }
 
         .section-text {
@@ -191,6 +196,7 @@
             z-index: 1;
             width: 290px;
             height: auto;
+            opacity: 0;
         }
 
         .image-left {

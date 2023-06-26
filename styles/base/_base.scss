@@ -233,3 +233,9 @@ main {
 .border-color-yellow {
     border-color: $yellow;
 }
+
+
+// animation delay custom
+.animate__delay-500ms {
+    --animate-delay: 0.5s;
+}
