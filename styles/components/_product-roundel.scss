@@ -1,0 +1,40 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the product roundel component.
+// -----------------------------------------------------------------------------
+
+.product-roundel {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 15px 10px 7px;
+    font-size: 11px;
+    text-align: center;
+    color: #fff;
+    background-color: $blue;
+    border-radius: 50%;
+    border: 1px solid $burgundy;
+    transition: .25s ease-in-out all;
+
+    &:hover {
+        color: #fff;
+        background-color: $pink;
+        border-color: $blue;
+    }
+
+    @media (max-width: 767px) {
+        top: 15px;
+        right: 10px;
+        width: 80px;
+        height: 80px;
+        padding: 10px 10px 3px;
+        font-size: 10px;
+    }
+}

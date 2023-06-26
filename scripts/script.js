@@ -50,6 +50,13 @@ var windowScrolled = () => {
     });
 }
 
+// secondary top navigation function
+var secondaryTopNav = () => {
+    if ( $("main").hasClass("page-shop") ) {
+        $(".top-navigation").addClass("top-navigation-secondary");
+    }
+}
+
 // search bar function
 var searchBar = () => {
     if ( $(".top-navigation .account .search").length ) {
@@ -178,6 +185,7 @@ $(document).ready(function() {
     searchBar();
     subscribeButton();
     scrollCue.init();
+    secondaryTopNav();
 });
   
 $(window).resize(function() {

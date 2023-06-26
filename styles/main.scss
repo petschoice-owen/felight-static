@@ -27,6 +27,7 @@
     'components/accordion',
     'components/contact-form',
     'components/floating-subscribe',
+    'components/product-roundel',
     'components/search-section';
 
 // 5. Layout-related sections
@@ -38,4 +39,5 @@
 
 // 6. Page-specific styles
 @import
-    'pages/home';
+    'pages/home',
+    'pages/shop';
