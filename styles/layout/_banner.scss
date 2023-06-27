@@ -255,6 +255,8 @@
     }
 
     @media (max-width: 767px) {
+        padding-bottom: 0;
+        
         p {
             max-width: 100%;
             padding: 15px 0;

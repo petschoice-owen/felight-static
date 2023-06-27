@@ -172,6 +172,58 @@ var subscribeButton = () => {
         })
     }
 }
+
+// product listing active section
+var productListingActive = () => {
+    if ( $(".product-listing").length ) {
+        const sections = document.querySelectorAll("section[id]");
+        let scrollY = window.scrollY;
+  
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+
+            if ( $(window).width() <= 767 ) {
+                const sectionTop = (current.getBoundingClientRect().top + window.scrollY) - 50;
+                sectionId = current.getAttribute("id");
+                
+                if ( scrollY > sectionTop && scrollY <= sectionTop + sectionHeight ) {
+                    document.querySelector(".product-listing-nav a[href*=" + sectionId + "]").classList.add("section-active");
+                } 
+                else {
+                    document.querySelector(".product-listing-nav a[href*=" + sectionId + "]").classList.remove("section-active");
+                }
+            }
+
+            // else {
+            //     const sectionTop = (current.getBoundingClientRect().top + window.scrollY) - 100;
+            //     sectionId = current.getAttribute("id");
+                
+            //     if ( scrollY > sectionTop && scrollY <= sectionTop + sectionHeight ) {
+            //         document.querySelector(".product-listing-nav a[href*=" + sectionId + "]").classList.add("active");
+            //     } 
+            //     else {
+            //         document.querySelector(".product-listing-nav a[href*=" + sectionId + "]").classList.remove("active");
+            //     }
+            // }
+        });
+
+        if ( $(".product-listing-nav").length ) {
+            if ( $(window).width() <= 767 ) {
+                var activeSection = $(".product-listing-nav .section-active")[0].getAttribute('href');
+                var activeSectionText = activeSection.replace('#','');
+
+                console.log(activeSectionText);
+            
+                $(".product-listing").each(function() {
+                    if ( $(this).attr('id') == activeSectionText ) {
+                        $(".product-listing").removeClass("section-active");
+                        $(this).addClass("section-active");
+                    }
+                });
+            }
+        }
+    }
+}
   
 // initialize the functions
 windowScrolled();
@@ -198,4 +250,6 @@ $(window).on('load', function() {
     accordion();
 });
   
-  
+$(window).scroll(function() {
+    // productListingActive();
+}).scroll();

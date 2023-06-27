@@ -5,5 +5,136 @@
 // -----------------------------------------------------------------------------
 
 .page-shop {
-    height: auto;
+    .product-listing {
+        position: relative;
+        padding: 100px 0;
+        overflow: hidden;
+
+        .image-listing {
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .image-left {
+            left: 0;
+        }
+
+        .image-right {
+            right: 0;
+        }
+
+        .section-text {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+    }
+
+    .product-listing-litters {
+        .image-left {
+            max-width: 15vw;
+        }
+
+        .image-right {
+            bottom: 5px;
+            max-width: 22vw;
+        }
+    }
+
+    .product-listing-accessories {
+        .image-left {
+            bottom: 5px;
+            max-width: 25vw;
+            max-height: 40vh;
+        }
+
+        .image-right {
+            bottom: 5px;
+            max-width: 22vw;
+            max-height: 37vh;
+        }
+    }
+
+    .product-listing-fresheners {
+        .image-left {
+            bottom: 0;
+            max-height: 22vw;
+        }
+
+        .image-right {
+            bottom: 0;
+            max-height: 22vw;
+        }
+
+        .btn-burgundy {
+            &:hover {
+                background-color: $pink;
+            }
+        }
+    }
+
+    // .section-active.product-listing {
+    //     .image-listing {
+    //         position: fixed;
+    //         bottom: 5px;
+    //     }
+    // }
+
+    @media (max-width: 991px) {
+        .product-listing {
+            padding-top: 80px;
+
+            .section-text {
+                margin-bottom: 30px;
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .product-listing-litters {
+            .image-left {
+                min-width: 120px;
+                max-width: 30vw;
+            }
+
+            .image-right {
+                min-width: 150px;
+                max-width: 35vw;
+            }
+        }
+
+        .product-listing-accessories {
+            .image-left {
+                left: -3%;
+                min-width: 150px;
+                max-width: 30vw;
+            }
+
+            .image-right {
+                min-width: 120px;
+                max-width: 25vw;
+            }
+        }
+
+        .product-listing-fresheners {
+            .image-left {
+                min-height: 160px;
+                max-height: 35vw;
+            }
+
+            .image-right {
+                min-height: 160px;
+                max-height: 35vw;
+            }
+        }
+    }
 }
