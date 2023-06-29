@@ -8,8 +8,9 @@
 
 // 2. Vendors
 @import
-    'vendors/slick.min.css',
-    'vendors/slick-theme.min.css',
+    // 'vendors/slick.min.css',
+    // 'vendors/slick-theme.min.css',
+    'vendors/swiper-bundle-min.css',
     'vendors/bootstrap.min.css',
     'vendors/animate.min.css',
     'vendors/scrollCue.css';
@@ -29,7 +30,9 @@
     'components/floating-subscribe',
     'components/search-section',
     'components/product-roundel',
-    'components/product-items';
+    'components/product-items',
+    'components/usage-instructions',
+    'components/swiper';
 
 // 5. Layout-related sections
 @import
@@ -41,4 +44,5 @@
 // 6. Page-specific styles
 @import
     'pages/home',
-    'pages/shop';
+    'pages/shop',
+    'pages/product-page';

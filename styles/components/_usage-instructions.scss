@@ -1,0 +1,388 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the usage instructions component.
+// -----------------------------------------------------------------------------
+
+.usage-instructions {
+    .section-text {
+        display: flex;
+        justify-content: center;
+    }
+
+    .instructions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &-1 {
+            padding-top: 70px;
+        }
+
+        &-2 {
+            padding-top: 70px;
+
+            .instruction {
+                &:nth-child(2) {
+                    &::before {
+                        left: -1px;
+                        width: 2px;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        &-3 {
+            padding-top: 70px;
+
+            .instruction {
+                &:nth-child(n+2) {
+                    &::before {
+                        left: -1px;
+                        width: 2px;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        &-4,
+        &-6,
+        &-8,
+        &-10 {
+            margin-top: 50px;
+            margin-bottom: -30px;
+
+            .instruction {
+                width: 50%;
+                margin: 50px 0;
+
+                &:nth-child(even) {
+                    &::before {
+                        left: -1px;
+                        width: 2px;
+                        height: 100%;
+                    }
+                }
+
+                &:nth-child(n+3) {
+                    &::after {
+                        top: -51px;
+                        left: 0;
+                        right: 0;
+                        width: calc(100% - 100px);
+                        height: 2px;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+
+        &-5,
+        &-7,
+        &-9 {
+            justify-content: flex-start;
+            margin-top: 50px;
+            margin-bottom: -30px;
+
+            .instruction {
+                width: 50%;
+                margin: 50px 0;
+
+                &:nth-child(even) {
+                    &::before {
+                        left: -1px;
+                        width: 2px;
+                        height: 100%;
+                    }
+                }
+
+                &:nth-child(n+3) {
+                    &::after {
+                        top: -51px;
+                        left: 0;
+                        right: 0;
+                        width: calc(100% - 100px);
+                        height: 2px;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .instruction {
+        position: relative;
+        padding: 0 50px;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: #fff;
+        }
+    }
+
+    .instruction-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .instruction-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+
+        img {
+            object-fit: contain;
+            object-position: center;
+            height: 150px;
+        }
+    }
+
+    .instruction-text {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        font-size: 20px;
+        text-align: center;
+
+        a {
+            color: $pink;
+
+            &:hover {
+                color: $burgundy;
+            }
+        }
+    }
+
+    @media (max-width: 1399px) {
+        .container {
+            max-width: 100%;
+        }
+
+        .instructions {
+            &-3 {
+                .instruction {
+                    width: 33.33%;
+                }
+
+                .instruction-text {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .instructions {
+            &-3 {
+                .instruction {
+                    padding: 0 40px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .instructions {
+            &-1 {
+                padding-top: 50px;
+            }
+
+            &-2 {
+                padding-top: 50px;
+
+                .instruction {
+                    width: 50%;
+                }
+            }
+
+            &-3 {
+                padding-top: 50px;
+
+                .instruction {
+                    padding: 0 20px;
+                }
+            }
+
+            &-4,
+            &-5,
+            &-6,
+            &-7,
+            &-8,
+            &-9,
+            &-10 {
+                margin-top: 20px;
+                margin-bottom: -50px;
+            }
+        }
+
+        .instruction {
+            padding: 0 30px;
+        }
+
+        .instruction-image {
+            img {
+                height: 120px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .instructions {
+            &-3 {
+                .instruction-text {
+                    padding: 15px 0;
+                }
+            }
+
+            &-4,
+            &-5,
+            &-6,
+            &-7,
+            &-8,
+            &-9,
+            &-10 {
+                margin-top: 0;
+                margin-bottom: -30px;
+
+                .instruction {
+                    margin: 40px 0;
+
+                    &:nth-child(n+3) {
+                        &::after {
+                            top: -41px;
+                            width: calc(100% - 80px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .instruction {
+            padding: 0 20px;
+        }
+
+        .instruction-image {
+            img {
+                height: 100px;
+            }
+        }
+
+        .instruction-text {
+            max-width: 100%;
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .instructions {
+            flex-direction: column;
+
+            .instruction { 
+                width: calc(100% - 30px);
+            }
+
+            &-1 {
+                padding-top: 20px;
+            }
+
+            &-2 {
+                padding-top: 20px;
+
+                .instruction {
+                    padding: 30px 20px;
+
+                    &:nth-child(2) {
+                        &::before {
+                            display: none;
+                        }
+
+                        &::after {
+                            top: -1px;
+                            left: 0;
+                            right: 0;
+                            width: calc(100% - 30px);
+                            height: 2px;
+                            margin: auto;
+                        }
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+
+            &-3 {
+                padding-top: 20px;
+
+                .instruction {
+                    padding: 30px 20px;
+
+                    &:nth-child(n+2) {
+                        &::before {
+                            display: none;
+                        }
+
+                        &::after {
+                            top: -1px;
+                            left: 0;
+                            right: 0;
+                            width: calc(100% - 30px);
+                            height: 2px;
+                            margin: auto;
+                        }
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+
+            &-4,
+            &-5,
+            &-6,
+            &-7,
+            &-8,
+            &-9,
+            &-10 {
+                margin-bottom: 0;
+
+                .instruction {
+                    padding: 30px 20px;
+                    margin: 0 auto;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    &:nth-child(n+2) {
+                        &::after {
+                            top: -1px;
+                            left: 0;
+                            right: 0;
+                            width: calc(100% - 30px);
+                            height: 2px;
+                            margin: auto;
+                        }
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .instruction {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
