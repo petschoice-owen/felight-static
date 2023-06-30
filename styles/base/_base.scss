@@ -239,3 +239,11 @@ main {
 .animate__delay-500ms {
     --animate-delay: 0.5s;
 }
+
+
+// br height
+br {
+    display: block;
+    content: "";
+    margin-top: 15px;
+}

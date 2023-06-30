@@ -6,6 +6,15 @@ var scrollSpy = () => {
         target: '#navbar_main'
     });
 
+    setTimeout(() => {
+        $("main").attr({
+            "data-bs-spy" : "scroll",
+            "data-bs-target" : "#navbar_main",
+            "data-bs-offset" : "0",
+            "tabindex" : "0"            
+        })
+    }, 100);
+
     // if ( $("#navbarSupportedContent").length ) {
     //     $("#navbarSupportedContent .navbar-nav a").each(function() {
     //         $(this).click(function() {
@@ -117,31 +126,6 @@ var swiperJs = () => {
                     },
                 });
             }
-        }
-    }
-}
-  
-// main element - auto padding-top
-var mainAutoPadding = () => {
-    if ($(".top-navigation")) {
-        var topNavHeight = $(".top-navigation").height();
-    
-        $(".top-navigation + main").css("padding-top", topNavHeight+"px");
-        
-        var footerHeight = $(".footer-section").outerHeight();
-        var heroHeight = topNavHeight + footerHeight;
-        
-        $(".hero").css("height", "calc(100vh - " + heroHeight + "px)");
-    
-        var contentHeight = $(".hero .wrapper").outerHeight();
-        var heroHeight = contentHeight + 200;
-        var heroHeightMobile = contentHeight + 100;
-    
-        if ($(window).width() <= 767) {
-            $(".hero").css("min-height", heroHeightMobile);
-        }
-        else {
-            $(".hero").css("min-height", heroHeight);
         }
     }
 }
@@ -280,8 +264,6 @@ windowScrolled();
   
 $(document).ready(function() {
     swiperJs();
-    // scrollSpy();
-    // mainAutoPadding();
     autoScrollSection();
     categoryBoxes();
     searchBar();
@@ -291,7 +273,6 @@ $(document).ready(function() {
 });
   
 $(window).resize(function() {
-    // mainAutoPadding();
     categoryBoxes();
 });
   
@@ -300,7 +281,3 @@ $(window).on('load', function() {
     accordion();
     productTabs();
 });
-  
-$(window).scroll(function() {
-    // productListingActive();
-}).scroll();

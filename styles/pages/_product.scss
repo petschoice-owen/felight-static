@@ -70,6 +70,7 @@
                     padding: 7px 0;
                     padding-left: 70px;
                     font-size: 20px;
+                    opacity: 0;
 
                     & + li {
                         margin-top: 15px;
@@ -141,6 +142,24 @@
                 background-color: $pink;
                 border: 2px solid #fff;
                 border-radius: 0;
+                opacity: 0;
+            }
+
+            .tab-content {
+                position: relative;
+                opacity: 0;
+                padding-top: 2px;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    z-index: 3;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $pink;
+                }
             }
 
             .tab-pane {
@@ -310,9 +329,33 @@
 
     @media (max-width: 767px) {
         .product-section {
-            padding-bottom: 70px;
+            padding: 50px 0 70px;
+
+            .product-roundel {
+                top: 15px;
+                right: initial;
+                left: 15px;
+            }
+
+            .product-image {
+                width: 100%;
+            }
+
+            .product-details {
+                width: 100%;
+                padding-top: 40px;
+                padding-left: 0;
+
+                .product_title {
+                    padding-right: 0;
+                    font-size: 30px;
+                }
+            }
 
             .product-tabs {
+                order: 3;
+                margin-top: 40px;
+
                 .nav-tabs {
                     flex-direction: column;
                 }
@@ -324,7 +367,6 @@
                 .tab-content-wrapper {
                     * {
                         font-size: 16px;
-                        line-height: 1.2;
                     }
                 }
             }
@@ -340,6 +382,12 @@
     }
 
     @media (max-width: 575px) {
+        .product-section {
+            .product {
+                width: calc(100% - 30px);
+            }
+        }
+
         .usage-instructions {
             padding: 50px 0;
         }
