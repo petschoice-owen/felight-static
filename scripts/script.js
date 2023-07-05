@@ -138,13 +138,13 @@ var categoryBoxes = () => {
             var categoryBoxHeight = $(".category-boxes .category p").closest(".category").height();
 
             $(".category-boxes .category").each(function() {
-                // $(this).css("height" , categoryBoxHeight + "px");
+                // $(this).css("min-height" , categoryBoxHeight + "px");
 
                 if ($(window).width() > 767) {
-                    $(this).css("height" , categoryBoxHeight + "px");
+                    $(this).css("min-height" , categoryBoxHeight + "px");
                 }
                 else {
-                    $(this).css("height" , "auto");
+                    $(this).css("min-height" , "auto");
                 }
             });
         }
